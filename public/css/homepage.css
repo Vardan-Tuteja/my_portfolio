@@ -1,0 +1,123 @@
+/* Homepage CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    background-image: url('/images/background.jpg'); /* Background image */
+    background-size: cover; /* Cover the whole page */
+    background-position: center; /* Center the background image */
+    color: #f0f0f0; /* Light color for text to contrast with dark background */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f0f0f0; /* Light color for links */
+    text-decoration: none;
+    font-size: 16px; /* Adjust font size for better visibility */
+}
+
+nav ul li a:hover {
+    color: #4db6ac; /* Color for links on hover */
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    min-height: calc(100vh - 60px); /* Ensure content is vertically centered */
+    padding: 20px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Minimum height for better centering */
+}
+
+.profile-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background for the container */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    max-width: 600px; /* Max width for the container */
+    width: 100%;
+    text-align: center; /* Center text inside the container */
+    color: #f0f0f0; /* Light text color for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.profile-picture {
+    width: 350px; /* Adjust the size of the profile picture */
+    height: 350px; /* Keep it square to maintain the circular shape */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    margin-bottom: 20px; /* Space below the profile picture */
+}
+
+h1 {
+    margin: 0;
+    color: #f0f0f0; /* Light color for headings */
+}
+
+p {
+    margin: 10px 0;
+    color: #dcdcdc; /* Slightly darker text for better readability */
+}
+
+/* Mobile menu styling */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
